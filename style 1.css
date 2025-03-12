@@ -1,0 +1,84 @@
+body {
+    background: url(/crack.gif);
+    background-color: #040000;
+    background-repeat: repeat-x;
+    background-size: 100vw;
+}
+
+.button {
+    width: 120px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+    justify-content: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    border: 3px solid rgb(255, 239, 94);
+    background-color: rgb(255, 239, 94);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.137);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(27, 27, 27);
+    color: white;
+}
+
+.arrow path {
+    fill: rgb(19, 19, 19);
+}
+
+.button:hover .arrow {
+    animation: slide-in-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-8px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.button:active {
+    transform: scale(0.97);
+}
+
+.body-txt-main-heading {
+    left: 300px;
+    position: relative;
+    text-wrap: nowrap;
+    overflow: hidden;
+    width: 15ch;
+    animation: typing 10s steps(1000) infinite;
+}
+
+.body-txt-main-heading::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 5px;
+
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100ch;
+    }
+}
